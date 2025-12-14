@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import logo from "@assets/generated_images/minimalist_wave_and_sun_logo_icon.png";
+import logo from "@assets/PUNTA_HERMOSA_(2)_1765672640261.png";
 
 export function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);

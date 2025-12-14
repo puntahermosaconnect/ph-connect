@@ -1,7 +1,7 @@
 import { Search, Bell, MapPin } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import logo from "@assets/generated_images/minimalist_wave_and_sun_logo_icon.png";
+import logo from "@assets/PUNTA_HERMOSA_(2)_1765672640261.png";
 
 export function MobileHeader() {
   return (

@@ -1,0 +1,126 @@
+
+🍽 Comer
+🛍 Comprar
+🛠 Servicios
+🚕 Moverte
+🌿 Vida & Bienestar
+🏄 Deportes
+🧳 Estadía Temporal
+🏠 Inmuebles (Venta/Alquiler)
+📅 Eventos
+🚨 Teléfonos de Emergencia
+
+🍽 Comer
+Subcategorías:
+Restaurantes
+Cafés
+Bares
+Delivery/Dark Kitchen
+
+Ficha del local:
+Nombre
+Fotos
+Dirección / mapa
+Teléfono / WhatsApp
+Horario
+Redes sociales
+
+🛍 Comprar
+Subcategorías:
+Tiendas
+Minimarkets
+Farmacias
+Ferreterías
+
+🛠 Servicios
+Rubros:
+Gas
+Gasfitería
+Carpintería
+Electricistas
+Técnicos
+Cuidado de niños
+Limpieza de hogar
+Mantenimiento de Piscinas 
+Otros oficios
+
+🚕 Moverte
+Opciones:
+Taxis
+Mototaxis
+Transporte local
+Grúas 
+(cada opción debe abrir un listado)
+
+🏠 Vida & Bienestar
+     ├─ Terapias holísticas
+     │    ├─ Terapias de Sanación energéticas 
+     │    ├─ Masajes
+     │    ├─ Reiki
+     │    ├─ Meditación
+     │    └─ Yoga terapéutico
+     ├─ Baile
+     └─ Gimnasios
+
+Deportes
+     ├─ Surf
+     ├─ Futbol
+     ├─ Skate Park
+     ├─ Voley Playa
+     ├─ Karate
+     ├─ Box
+     ├─ Brazilian Jiu Jitsu
+     └─ Capoeira 
+
+🧳Estadía Temporal
+ ├─ Casas (alquiler temporal)
+ ├─ Departamentos (alquiler)
+ ├─ Hostels
+ ├─ Habitaciones
+
+
+Ficha:
+Fotos
+Descripción
+Precio referencial
+Contacto directo
+Ubicación
+
+🏠 INMUEBLES (VENTA / ALQUILER)
+Inmuebles
+ ├─ Alquiler anual
+ ├─ Venta de casas
+ ├─ Venta de departamentos
+ ├─ Agentes inmobiliarios
+
+
+📅 Eventos
+Tipos de eventos:
+🎉 Fiestas
+🏄 Campeonatos de surf
+🇵🇪 Fechas patrias
+🎭 Actividades culturales
+🏖 Eventos municipales
+
+Detalle del evento:
+Fecha
+Lugar
+Descripción
+Imagen
+Organiza / contacto
+
+
+🚨 Teléfonos de Emergencia
+ 
+Seguridad Ciudadana: 981555862
+Comisaría de Punta Hermosa: 959641562
+Serenazgo: 994 045 419
+SAMU: 106
+Bomberos: (01) 231 5459 (Anexo 116) 
+Un toque = llamada
+
+Municipalidad y Servicios
+Municipalidad: (01) 2307636 / 2307696
+FiscaFono: 953215368
+Centro de Salud: (01) 2307025
+Club Náutico: (01) 2307600 / 2307094 (anexo 101-102) o 989246703 

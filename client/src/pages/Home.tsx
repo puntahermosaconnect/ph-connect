@@ -12,25 +12,21 @@ export default function Home() {
       <MobileHeader />
       
       <main className="flex flex-col gap-6 pt-4">
-        {/* Categories Horizontal Scroll */}
-        <section>
-          <div className="px-4 mb-3 flex items-center justify-between">
+        {/* Categories Grid */}
+        <section className="px-4">
+          <div className="mb-3 flex items-center justify-between">
             <h2 className="font-bold text-lg">Categorías</h2>
-            <span className="text-xs text-primary font-medium">Ver todo</span>
           </div>
-          <ScrollArea className="w-full whitespace-nowrap">
-            <div className="flex w-max space-x-4 px-4 pb-4">
-              {categories.map((category) => (
-                <div key={category.id} className="flex flex-col items-center gap-2">
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center ${category.color} bg-opacity-20 shadow-sm`}>
-                    <category.icon className="w-7 h-7" />
-                  </div>
-                  <span className="text-xs font-medium text-muted-foreground">{category.name}</span>
+          <div className="grid grid-cols-4 gap-4">
+            {categories.map((category) => (
+              <div key={category.id} className="flex flex-col items-center gap-2">
+                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center ${category.color} bg-opacity-20 shadow-sm`}>
+                  <category.icon className="w-7 h-7" />
                 </div>
-              ))}
-            </div>
-            <ScrollBar orientation="horizontal" />
-          </ScrollArea>
+                <span className="text-xs font-medium text-muted-foreground text-center leading-tight">{category.name}</span>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* Featured Banner */}

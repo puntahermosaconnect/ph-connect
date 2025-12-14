@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import logo from "@assets/generated_images/minimalist_wave_and_sun_logo_icon.png";
 
 export function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -13,8 +14,11 @@ export function Navbar() {
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center gap-2">
-              <span className="font-heading text-xl font-bold text-primary">Comunidad</span>
-              <span className="font-heading text-xl font-bold text-foreground">Connect</span>
+              <img src={logo} alt="Punta Hermosa CONNECT Logo" className="w-8 h-8 object-contain" />
+              <div className="flex flex-col leading-none">
+                <span className="font-heading text-lg font-bold text-primary">Punta Hermosa</span>
+                <span className="font-heading text-sm font-bold text-foreground tracking-widest">CONNECT</span>
+              </div>
           </Link>
           <div className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
             <Link href="/" className="hover:text-primary transition-colors">Inicio</Link>

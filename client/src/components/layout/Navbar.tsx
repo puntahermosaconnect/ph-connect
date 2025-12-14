@@ -12,17 +12,15 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-6">
-          <Link href="/">
-            <a className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
               <span className="font-heading text-xl font-bold text-primary">Comunidad</span>
               <span className="font-heading text-xl font-bold text-foreground">Connect</span>
-            </a>
           </Link>
           <div className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
-            <Link href="/"><a className="hover:text-primary transition-colors">Inicio</a></Link>
-            <Link href="/explorar"><a className="hover:text-primary transition-colors">Explorar</a></Link>
-            <Link href="/eventos"><a className="hover:text-primary transition-colors">Eventos</a></Link>
-            <Link href="/contacto"><a className="hover:text-primary transition-colors">Contacto</a></Link>
+            <Link href="/" className="hover:text-primary transition-colors">Inicio</Link>
+            <Link href="/explorar" className="hover:text-primary transition-colors">Explorar</Link>
+            <Link href="/eventos" className="hover:text-primary transition-colors">Eventos</Link>
+            <Link href="/contacto" className="hover:text-primary transition-colors">Contacto</Link>
           </div>
         </div>
 
@@ -57,10 +55,10 @@ export function Navbar() {
               </SheetTrigger>
               <SheetContent side="right">
                 <div className="flex flex-col gap-6 mt-6">
-                  <Link href="/"><a className="font-medium text-lg">Inicio</a></Link>
-                  <Link href="/explorar"><a className="font-medium text-lg">Explorar</a></Link>
-                  <Link href="/eventos"><a className="font-medium text-lg">Eventos</a></Link>
-                  <Link href="/contacto"><a className="font-medium text-lg">Contacto</a></Link>
+                  <Link href="/" className="font-medium text-lg">Inicio</Link>
+                  <Link href="/explorar" className="font-medium text-lg">Explorar</Link>
+                  <Link href="/eventos" className="font-medium text-lg">Eventos</Link>
+                  <Link href="/contacto" className="font-medium text-lg">Contacto</Link>
                   <div className="h-px bg-border my-2" />
                   <Button className="w-full">Publicar Negocio</Button>
                   <Button variant="outline" className="w-full">Ingresar</Button>

@@ -36,7 +36,7 @@ function App() {
 
         <Toaster />
         <h1 style={{ color: "green" }}>ANTES DEL ROUTER</h1>
-        <Router />
+        <Home />
         <h1 style={{ color: "purple" }}>DESPUÉS DEL ROUTER</h1>
       </TooltipProvider>
     </QueryClientProvider>

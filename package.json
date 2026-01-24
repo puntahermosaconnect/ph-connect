@@ -12,12 +12,9 @@
     "db:push": "drizzle-kit push"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@capacitor/android": "^8.0.1",
     "@capacitor/cli": "^8.0.1",
     "@capacitor/core": "^8.0.1",
-=======
->>>>>>> f1f1c46 (Extracted stack files)
     "@hookform/resolvers": "^3.10.0",
     "@jridgewell/trace-mapping": "^0.3.25",
     "@radix-ui/react-accordion": "^1.2.12",
@@ -55,10 +52,7 @@
     "date-fns": "^3.6.0",
     "drizzle-orm": "^0.39.3",
     "drizzle-zod": "^0.7.0",
-<<<<<<< HEAD
     "embla-carousel-autoplay": "^8.6.0",
-=======
->>>>>>> f1f1c46 (Extracted stack files)
     "embla-carousel-react": "^8.6.0",
     "express": "^4.21.2",
     "express-session": "^1.18.1",

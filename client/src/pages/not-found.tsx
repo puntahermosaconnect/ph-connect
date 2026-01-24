@@ -1,4 +1,3 @@
-<h1 style={{ color: "blue" }}>ESTOY EN NOT FOUND</h1>
 import { Card, CardContent } from "@/components/ui/card";
 import { AlertCircle } from "lucide-react";
 

@@ -1,3 +1,4 @@
+<h1 style={{ color: "red" }}>ESTOY EN HOME NUEVO</h1>
 import { MobileHeader } from "@/components/layout/MobileHeader";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { categories, listings } from "@/lib/mock-data";

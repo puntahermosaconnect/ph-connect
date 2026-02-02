@@ -28,10 +28,10 @@ const LOGO_PATH = "/logo.png";
 const SHEET_ID = "16aIYKOln_dO1paNar8dGPEPVtkGxeb_TxGboxPD0JJs";
 
 const SHEET_CSV_URL =
-  `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv`;
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vTX1kpOM_Vg8KUxlU8mAm1zVehGXQVMTCDVI-0YWBKjp5rCVPu42FHDxgh-1qIYpJf5-rUt6nUsiKX9/pub?output=csv";
 
 const PROMOS_CSV_URL =
-  `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=151034078`;
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vTX1kpOM_Vg8KUxlU8mAm1zVehGXQVMTCDVI-0YWBKjp5rCVPu42FHDxgh-1qIYpJf5-rUt6nUsiKX9/pub?gid=151034078&single=true&output=csv";
 
 const RECOMENDADOS_CSV_URL =
   `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=2047539037`;

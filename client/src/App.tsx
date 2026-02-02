@@ -357,67 +357,117 @@ function SocialLinks({ row }: { row: any }) {
 
   if (!ig && !fb && !tiktok && !web) return null;
 
-  const formatLink = (link: string, platform: string) => {
-    if (!link) return "#";
-    if (link.startsWith("http")) return link;
-    
-    // Si es solo usuario, construir la URL
-    const user = link.replace(/^@/, "");
-    if (platform === "ig") return `https://instagram.com/${user}`;
-    if (platform === "fb") return `https://facebook.com/${user}`;
-    if (platform === "tiktok") return `https://tiktok.com/@${user}`;
-    return link.startsWith("www") ? `https://${link}` : `https://${link}`;
-  };
+const formatLink = (link: string, platform: string) => {
+  if (!link) return "#";
 
-  return (
-    <div style={{ marginTop: 8, display: "flex", flexWrap: "wrap", gap: "8px" }}>
-      {ig && (
-        <a href={formatLink(ig, "ig")} target="_blank" rel="noopener noreferrer" style={{ fontSize: 11, color: "#C13584", fontWeight: "600", textDecoration: "none", display: "flex", alignItems: "center", gap: 3, background: "#fef2f2", padding: "4px 8px", borderRadius: "6px", border: "1px solid #fee2e2" }}>
-          📸 {ig.startsWith("@") ? ig : `@${ig}`}
-        </a>
-      )}
-      {fb && (
-        <a href={formatLink(fb, "fb")} target="_blank" rel="noopener noreferrer" style={{ fontSize: 11, color: "#1877F2", fontWeight: "600", textDecoration: "none", display: "flex", alignItems: "center", gap: 3, background: "#f0f7ff", padding: "4px 8px", borderRadius: "6px", border: "1px solid #dbeafe" }}>
-          🔵 {fb}
-        </a>
-      )}
-      {tiktok && !/^\d+$/.test(tiktok) && (
-        <a href={formatLink(tiktok, "tiktok")} target="_blank" rel="noopener noreferrer" style={{ fontSize: 11, color: "#000000", fontWeight: "600", textDecoration: "none", display: "flex", alignItems: "center", gap: 3, background: "#f3f4f6", padding: "4px 8px", borderRadius: "6px", border: "1px solid #e5e7eb" }}>
-          🎵 {tiktok.startsWith("@") ? tiktok : `@${tiktok}`}
-        </a>
-      )}
-      {web && (
-        <a href={web.startsWith("http") ? web : `https://${web}`} target="_blank" rel="noopener noreferrer" style={{ fontSize: 11, color: "#0056b3", fontWeight: "600", textDecoration: "none", display: "flex", alignItems: "center", gap: 3, background: "#f0f7ff", padding: "4px 8px", borderRadius: "6px", border: "1px solid #dbeafe", width: "100%" }}>
-          🌐 {web}
-        </a>
-      )}
-    </div>
-  );
+  let clean = link.toString().trim();
+
+  // si ya es URL completa
+  if (clean.startsWith("http://") || clean.startsWith("https://")) {
+    return clean;
+  }
+
+  // quitar @ si lo hay
+  clean = clean.replace(/^@/, "");
+
+  switch (platform) {
+    case "ig":
+      return `https://www.instagram.com/${clean}`;
+    case "fb":
+      return `https://www.facebook.com/${clean}`;
+    case "tiktok":
+      return `https://www.tiktok.com/@${clean}`;
+    default:
+      // web
+      if (clean.startsWith("www.")) {
+        return `https://${clean}`;
+      }
+      return `https://${clean}`;
+  }
+};
+
+return (
+  <div style={{ marginTop: 8, display: "flex", flexWrap: "wrap", gap: "8px" }}>
+    {ig && (
+      <button
+        onClick={() => window.open(formatLink(ig, "ig"), "_blank", "noopener,noreferrer")}
+        style={socialBtn("#C13584", "#fef2f2")}
+      >
+        📸 {ig.startsWith("@") ? ig : `@${ig}`}
+      </button>
+    )}
+
+    {fb && (
+      <button
+        onClick={() => window.open(formatLink(fb, "fb"), "_blank", "noopener,noreferrer")}
+        style={socialBtn("#1877F2", "#f0f7ff")}
+      >
+        🔵 {fb}
+      </button>
+    )}
+
+    {tiktok && !/^\d+$/.test(tiktok) && (
+      <button
+        onClick={() => window.open(formatLink(tiktok, "tiktok"), "_blank", "noopener,noreferrer")}
+        style={socialBtn("#000", "#f3f4f6")}
+      >
+        🎵 {tiktok.startsWith("@") ? tiktok : `@${tiktok}`}
+      </button>
+    )}
+
+    {web && (
+      <button
+        onClick={() =>
+          window.open(
+            web.startsWith("http") ? web : `https://${web}`,
+            "_blank",
+            "noopener,noreferrer"
+          )
+        }
+        style={{ ...socialBtn("#0056b3", "#f0f7ff"), width: "100%" }}
+      >
+        🌐 {web}
+      </button>
+    )}
+  </div>
+);
 }
 
 function BusinessCard({ row, t }: { row: any, t: any }) {
 const formatLink = (link: string) => {
   if (!link) return "#";
 
-  let url = link.toString().trim();
+  let clean = link.toString().trim();
 
-  if (!url.startsWith("http")) {
-    url = "https://" + url;
+  if (clean.startsWith("http://") || clean.startsWith("https://")) {
+    return clean;
   }
 
-  if (url.includes("instagram.com")) {
-    return url.replace("instagram.com", "www.instagram.com");
+  clean = clean.replace(/^@/, "");
+
+  if (clean.includes("instagram.com")) {
+    return clean.startsWith("http")
+      ? clean
+      : `https://www.instagram.com/${clean.split("/").pop()}`;
   }
 
-  if (url.includes("facebook.com")) {
-    return url.replace("facebook.com", "www.facebook.com");
+  if (clean.includes("facebook.com")) {
+    return clean.startsWith("http")
+      ? clean
+      : `https://www.facebook.com/${clean.split("/").pop()}`;
   }
 
-  if (url.includes("tiktok.com")) {
-    return url.replace("tiktok.com", "www.tiktok.com");
+  if (clean.includes("tiktok.com")) {
+    return clean.startsWith("http")
+      ? clean
+      : `https://www.tiktok.com/@${clean.split("/").pop()}`;
   }
 
-  return url;
+  if (clean.startsWith("www.")) {
+    return `https://${clean}`;
+  }
+
+  return `https://${clean}`;
 };
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {

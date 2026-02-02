@@ -396,12 +396,29 @@ function SocialLinks({ row }: { row: any }) {
 }
 
 function BusinessCard({ row, t }: { row: any, t: any }) {
-  const formatLink = (link: string) => {
-    if (!link) return "#";
-    const l = link.toString().trim();
-    if (!l) return "#";
-    return l.startsWith("http") ? l : `https://${l}`;
-  };
+const formatLink = (link: string) => {
+  if (!link) return "#";
+
+  let url = link.toString().trim();
+
+  if (!url.startsWith("http")) {
+    url = "https://" + url;
+  }
+
+  if (url.includes("instagram.com")) {
+    return url.replace("instagram.com", "www.instagram.com");
+  }
+
+  if (url.includes("facebook.com")) {
+    return url.replace("facebook.com", "www.facebook.com");
+  }
+
+  if (url.includes("tiktok.com")) {
+    return url.replace("tiktok.com", "www.tiktok.com");
+  }
+
+  return url;
+};
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     e.currentTarget.style.display = 'none';
